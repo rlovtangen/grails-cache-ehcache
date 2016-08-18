@@ -16,7 +16,7 @@ plugins {
     id "com.jfrog.bintray" version "1.2"
 }
 
-version "2.0.0.BUILD-SNAPSHOT"
+version "2.0.0.R-M1"
 group "org.grails.plugins"
 
 apply plugin: 'maven-publish'
@@ -77,5 +77,11 @@ eclipse {
 idea {
     module {
         scopes.PROVIDED.plus += [configurations.provided]
+    }
+}
+
+bintray {
+    pkg {
+        userOrg = ''
     }
 }
